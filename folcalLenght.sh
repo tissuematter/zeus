@@ -1,0 +1,2 @@
+#http://www.max.grenkowitz.net/?topic=1057
+sqlite3 --header --column 'Lightroom Catalog.lrcat' "SELECT focalLength, COUNT(focalLength), AgInternedExifCameraModel.value, AgInternedExifLens.value FROM AgHarvestedExifMetadata, AgInternedExifCameraModel, AgInternedExifLens WHERE cameraModelRef = AgInternedExifCameraModel.id_local AND lensRef = AgInternedExifLens.id_local GROUP BY focalLength, AgInternedExifCameraModel.value, AgInternedExifLens.value ORDER BY focalLength ASC;"

@@ -1,0 +1,153 @@
+sqlite3 'Lightroom Catalog.lrcat'
+
+select count (DISTINCT folder) from AgLibraryFile;
+pragma table_info(AgLibraryFile);
+sqlite> .mode column
+sqlite> pragma table_info(AgLibraryFile);
+   name        type        notnull     dflt_value  pk        
+----------  ----------  ----------  ----------  ----------  ----------
+0           id_local    INTEGER     0                       1         
+1           id_global               1                       0         
+2           baseName                1           ''          0         
+3           errorMessa              0                       0         
+4           errorTime               0                       0         
+5           extension               1           ''          0         
+6           externalMo              0                       0         
+7           folder      INTEGER     1           0           0         
+8           idx_filena              1           ''          0         
+9           importHash              0                       0         
+10          lc_idx_fil              1           ''          0         
+11          lc_idx_fil              1           ''          0         
+12          md5                     0                       0         
+13          modTime                 0                       0         
+14          originalFi              1           ''          0         
+15          sidecarExt              0                       0   
+
+sqlite> .width 5 30
+sqlite> pragma table_info(AgLibraryFile);
+cid    name                            type        notnull     dflt_value  pk        
+-----  ------------------------------  ----------  ----------  ----------  ----------
+0      id_local                        INTEGER     0                       1         
+1      id_global                                   1                       0         
+2      baseName                                    1           ''          0         
+3      errorMessage                                0                       0         
+4      errorTime                                   0                       0         
+5      extension                                   1           ''          0         
+6      externalModTime                             0                       0         
+7      folder                          INTEGER     1           0           0         
+8      idx_filename                                1           ''          0         
+9      importHash                                  0                       0         
+10     lc_idx_filename                             1           ''          0         
+11     lc_idx_filenameExtension                    1           ''          0         
+12     md5                                         0                       0         
+13     modTime                                     0                       0         
+14     originalFilename                            1           ''          0         
+15     sidecarExtensions                           0                       0 
+
+sqlite> .width 100
+sqlite> SELECT name FROM sqlite_master WHERE type='table'; 
+name                                                                                                
+----------------------------------------------------------------------------------------------------
+Adobe_variablesTable                                                                                
+Adobe_variables                                                                                     
+AgFolderContent                                                                                     
+Adobe_AdditionalMetadata                                                                            
+AgMetadataSearchIndex                                                                               
+Adobe_imageProperties                                                                               
+Adobe_libraryImageDevelopSnapshot                                                                   
+Adobe_libraryImageDevelopHistoryStep                                                                
+Adobe_imageProofSettings                                                                            
+AgLibraryKeywordImage                                                                               
+Adobe_images                                                                                        
+AgLibraryKeyword                                                                                    
+AgLibraryKeywordSynonym                                                                             
+AgLibraryCollection                                                                                 
+AgLibraryCollectionImage                                                                            
+AgLibraryCollectionContent                                                                          
+AgLibraryCollectionStack                                                                            
+AgLibraryCollectionStackImage                                                                       
+AgOutputImageAsset                                                                                  
+AgLibraryFolderStack                                                                                
+AgLibraryFolderStackImage                                                                           
+AgLibraryPublishedCollection                                                                        
+AgLibraryPublishedCollectionImage                                                                   
+AgLibraryPublishedCollectionContent                                                                 
+AgLibraryIPTC                                                                                       
+AgLibraryImport                                                                                     
+AgLibraryImportImage                                                                                
+AgSpecialSourceContent                                                                              
+AgLibraryRootFolder                                                                                 
+AgLibraryFolder                                                                                     
+AgLibraryFile                                                                                       
+AgLibraryKeywordPopularity                                                                          
+AgLibraryKeywordCooccurrence                                                                        
+AgPhotoComment                                                                                      
+AgPhotoProperty                                                                                     
+AgPhotoPropertyArrayElement                                                                         
+AgSearchablePhotoProperty                                                                           
+AgSearchablePhotoPropertyArrayElement                                                               
+AgPhotoPropertySpec                                                                                 
+AgRemotePhoto                                                                                       
+AgVideoInfo                                                                                         
+AgLibraryFace                                                                                       
+Adobe_faceProperties                                                                                
+AgLibraryFaceData                                                                                   
+AgLibraryFaceCluster                                                                                
+AgLibraryKeywordFace                                                                                
+Adobe_libraryImageFaceProcessHistory                                                                
+AgLibraryImageSearchData                                                                            
+AgSourceColorProfileConstants                                                                       
+AgDNGProxyInfo                                                                                      
+AgLibraryOzFeedbackInfo                                                                             
+Adobe_imageDevelopBeforeSettings                                                                    
+Adobe_imageDevelopSettings                                                                          
+Adobe_namedIdentityPlate                                                                            
+AgMRULists                                                                                          
+AgHarvestedExifMetadata                                                                             
+AgHarvestedIptcMetadata                                                                             
+AgHarvestedDNGMetadata                                                                              
+AgInternedIptcCreator                                                                               
+AgInternedIptcCountry                                                                               
+AgInternedIptcLocation                                                                              
+AgInternedIptcState                                                                                 
+AgInternedExifCameraModel                                                                           
+AgInternedExifCameraSN                                                                              
+AgInternedIptcJobIdentifier                                                                         
+AgInternedIptcIsoCountryCode                                                                        
+AgInternedIptcCity                                                                                  
+AgInternedExifLens                                                                                  
+AgHarvestedMetadataWorklist                                                                         
+AgLibraryImageXMPUpdater                                                                            
+AgPublishListenerWorklist                                                                           
+AgDNGProxyInfoUpdater                                                                               
+AgTempImages                                                                                        
+AgLibraryUpdatedImages                                                                              
+AgLastCatalogExport                                                                                 
+AgLibraryCollectionStackData                                                                        
+AgLibraryFolderStackData                                                                            
+LrMobileSyncChangeCounter                                                                           
+AgLibraryCollectionTrackedAssets                                                                    
+AgLibraryImageChangeCounter                                                                         
+AgLibraryImageOzAssetIds                                                                            
+AgDeletedOzAssetIds                                                                                 
+AgLibraryImageSyncedAssetData                                                                       
+AgPendingOzAssetBinaryDownloads                                                                     
+AgPendingOzAssets                                                                                   
+AgUnsupportedOzAssets                                                                               
+AgLibraryCollectionChangeCounter                                                                    
+AgLibraryCollectionOzAlbumIds                                                                       
+AgDeletedOzAlbumIds                                                                                 
+AgLibraryCollectionSyncedAlbumData                                                                  
+AgLibraryCollectionCoverImage                                                                       
+AgLibraryCollectionImageChangeCounter                                                               
+AgLibraryCollectionImageOzAlbumAssetIds                                                             
+AgLibraryCollectionImageOzSortOrder                                                                 
+AgDeletedOzAlbumAssetIds                                                                            
+AgPendingOzAlbumAssetIds                                                                            
+AgOzSpaceIds                                                                                        
+AgDeletedOzSpaceIds                                                                                 
+AgOzSpaceAlbumIds                                                                                   
+AgLibraryOzCommentIds                                                                               
+AgLibraryOzFavoriteIds                                                                              
+AgLibraryFileAssetMetadata          
+

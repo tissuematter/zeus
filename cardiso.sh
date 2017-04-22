@@ -5,5 +5,5 @@ echo $name
 date
 diskutil rename $2 $name
 popd
-hdiutil makehybrid -o $name.iso /Volumes/$2 -iso -joliet
+hdiutil makehybrid -o $name.iso /Volumes/$name -iso -joliet
 date

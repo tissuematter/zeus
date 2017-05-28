@@ -1,13 +1,13 @@
-Last login: Sat May 27 18:32:51 on ttys000
+Last login: Sat May 27 18:35:48 on ttys000
 zeus:~ jon$ cd /Volumes/photos/lr/iso/
 zeus:iso jon$ ./cardiso.sh /Volumes/EOS_DIGITAL/DCIM/101EOS7D/ EOS_DIGITAL
 /Volumes/EOS_DIGITAL/DCIM/101EOS7D /Volumes/photos/lr/iso
-7D20170525
-Sat May 27 18:36:34 PDT 2017
-Volume on disk3s1 renamed to 7D20170525
+7D20170527
+Sat May 27 19:52:41 PDT 2017
+Volume on disk4s1 renamed to 7D20170527
 /Volumes/photos/lr/iso
 Creating hybrid image...
 ..........................................................................................................
 
-Sat May 27 19:46:16 PDT 2017
-zeus:iso jon$ vi ~/git/zeus/cardiso.log 
+Sat May 27 21:17:18 PDT 2017
+zeus:iso jon$ vi ~/git/zeus/cardiso.log

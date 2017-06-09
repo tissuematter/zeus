@@ -1,0 +1,23 @@
+BrainStorm
+All APIs get their own:
+ dns name -> gateway
+Partition Data layer
+Call comes into gateway, we direct device to it’s partition
+Our data layer is distributed so we can route user A to partition A
+  we can route Me to the partition I support
+  we can route You to the partition you support
+  Partners get routed to the future release partition so all experience what we are about to…
+  Release into the customer partition
+
+VLAN (yes each api is segmented into it’s own VLAN)
+ Nginx hosts knows all about api farm
+ Location calls are all on 192.168.20.x
+   Primary container ends in 20
+   Next is 21
+   Next is 22…
+ Payment calls are all on 192.168.30.x
+   -
+   -
+   -
+
+each api has it's own pipeline and team supporting it fullstack

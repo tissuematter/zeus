@@ -1,0 +1,11 @@
+zeus:zeus jon$ ./cardiso.sh /Volumes/PCD2636/PHOTO_CD/IMAGES/ PCD2636
+/Volumes/PCD2636/PHOTO_CD/IMAGES ~/git/zeus
+pcd19960110
+Tue Apr  4 00:55:49 PDT 2017
+~/git/zeus
+Creating hybrid image...
+.......................................................................................................................................................................................
+
+Tue Apr  4 00:57:17 PDT 2017
+zeus:zeus jon$ #for file in *.PCD; do convert $file[6] "/Users/jon/Pictures/$file.png";
+

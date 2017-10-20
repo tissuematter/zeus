@@ -1,0 +1,51 @@
+                        Accton Technology Corporation
+                  EN1207-TX Series PCI Fast Ethernet Adapter
+                    Netware MSL driver Installation Guide
+
+A. Preparation
+   -----------
+     Before running Accton EN1207-TX Series MSL driver, you should prepare
+                i). a cross-over cable,
+               ii). two EN1207-TX Series adapters.
+
+B. Configuration
+   -------------
+
+          +---------------------+               +---------------------+
+          |                     |               |                     |
+          |       Netware       |               |       Netware       |
+          |   SFT III Server    |               |   SFT III Server    |
+          |  Primary IOEngine   |               |  Secondary IOEngine |
+          |                     |               |                     |
+          |        +------------|  Cross-over   +------------+        |
+          |        | EN1207-TX  |    Cable      | EN1207-TX  |        |
+          |        | Series     |<------------->| Series     |        |
+          |        +------------|               +------------+        |
+          |                     |               |                     |
+          +---------------------+               +---------------------+
+
+
+C. Activate MSL driver
+   -------------------
+        1. Copy AC4XMSL.MSL from EN1207-TX Series driver diskette to the SFT
+           III system directory (ex: C:\NWSERVER) in your Mirror Servers,
+           respectively.
+
+        2. From Primary IOEngine Console, type the following command to load
+           EN1207-TX Series MSL driver,
+
+                LOAD AC4XMSL SLOT=1
+
+           The keyword SLOT identifies which EN1207-TX Series adapter is used
+           in the server.  Slot value 1 represents the first EN1207-TX
+           Series adapter. While 2 represents the next one, etc.
+
+        3. From Secondary IOEngine Console, type the above command again to
+           load the MSL driver on the secondary SFT III Server.  After that,
+           the IOEngine Console should prompt a message that notified user
+           Mirror Server Link has been estabilished.
+
+        4. Now, you can startup the MSEngine by entering the command
+           "ACTIVATE SERVER" on the Primary IOEngine Console.
+
+

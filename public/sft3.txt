@@ -47,5 +47,3 @@ C. Activate MSL driver
 
         4. Now, you can startup the MSEngine by entering the command
            "ACTIVATE SERVER" on the Primary IOEngine Console.
-
-

@@ -151,3 +151,18 @@ AgLibraryOzCommentIds
 AgLibraryOzFavoriteIds                                                                              
 AgLibraryFileAssetMetadata          
 
+
+cd /Volumes/photos/lr/bu/2018-06-03 2251
+sqlite3 'Lightroom Catalog-2.lrcat' "SELECT COUNT(*), AgInternedExifCameraModel.value FROM AgHarvestedExifMetadata, AgInternedExifCameraModel WHERE cameraModelRef = AgInternedExifCameraModel.id_local GROUP BY AgInternedExifCameraModel.value"
+21608|Canon EOS 10D
+12560|Canon EOS 6D
+166621|Canon EOS 7D Mark II
+8399|Canon EOS REBEL SL1
+3321|Canon EOS REBEL T1i
+3686|Canon PowerShot S40
+1|LG-C410
+1|iPhone
+2|iPhone 6
+11249|iPhone 6 Plus
+256|iPhone X
+
